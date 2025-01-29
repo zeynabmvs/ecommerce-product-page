@@ -1,20 +1,17 @@
 import { iconMapping } from "../utils/data";
 
 const Icon = ({ name, alt = "icon", className = "", ...props }) => {
-  const iconPath = iconMapping[name];
+  const IconComponent = iconMapping[name];
 
-  if (!iconPath) {
+  if (!IconComponent) {
     console.error(`Icon "${name}" not found in the mapping.`);
     return null;
   }
 
   return (
-    <img
-      src={process.env.PUBLIC_URL + iconPath}
-      alt={alt}
-      className={`icon ${className}`}
-      {...props}
-    />
+    <span className={`icon ${className}`} aria-label={alt} {...props}>
+      {IconComponent}
+    </span>
   );
 };
 
