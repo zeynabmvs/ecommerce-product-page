@@ -1,13 +1,14 @@
 import Icon from './components/Icon';
+import Header from './components/header/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="container"></header>
+      <Header />
       <main className="container">
 
-      <Icon name="cart" alt="cart Icon" />
-      <Icon name="close" alt="close Icon" />
+      {/* <Icon name="cart" alt="cart Icon" />
+      <Icon name="close" alt="close Icon" /> */}
 
       {/* Collections
       Men
