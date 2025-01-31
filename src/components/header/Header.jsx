@@ -1,5 +1,5 @@
 import Icon from "../Icon";
-import "./Header.css";
+import "../../styles/Header.css";
 import { headerLinks } from "../../utils/data";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
@@ -16,10 +16,10 @@ const Header = () => {
   const onMobileMenuToggleClick = () => {
     setShowMobileMenu(!showMobileMenu);
     if (!showMobileMenu) {
-        document.body.style.overflow = "hidden"; // Disable scrolling when menu is open
-      } else {
-        document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
-      }
+      document.body.style.overflow = "hidden"; // Disable scrolling when menu is open
+    } else {
+      document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
+    }
   };
 
   return (
@@ -75,8 +75,11 @@ const Header = () => {
         </div>
       </div>
 
-      <MobileMenu showMenu={showMobileMenu} toggleMenu={onMobileMenuToggleClick} headerLinks={headerLinks}/>
-
+      <MobileMenu
+        showMenu={showMobileMenu}
+        toggleMenu={onMobileMenuToggleClick}
+        headerLinks={headerLinks}
+      />
     </header>
   );
 };
