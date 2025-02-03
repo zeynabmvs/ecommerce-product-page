@@ -1,6 +1,7 @@
 import Icon from "./components/Icon";
 import Header from "./components/header/Header";
 import Button from "./components/Button";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   return (
@@ -31,6 +32,13 @@ function App() {
       Add to cart */}
 
         <Button name="Add to cart" />
+        <ProductDetails
+          title={"Sneaker company"}
+          heading={"Fall limited edition sneakers"}
+          content={
+            "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer"
+          }
+        />
       </main>
     </div>
   );
