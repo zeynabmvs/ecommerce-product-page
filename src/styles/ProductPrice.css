@@ -1,0 +1,47 @@
+.product--price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount .current {
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
+}
+
+.amount .percentage {
+  width: 5.4rem;
+  border-radius: 5px;
+  background-color: #000;
+  padding: 0.2rem 1rem;
+  color: var(--white);
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.product--price .previous {
+  font-size: 2.4rem;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 768px) {
+  .product--price {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .amount .current {
+    padding: 0rem 0rem;
+  }
+}

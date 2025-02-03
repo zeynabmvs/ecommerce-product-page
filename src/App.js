@@ -2,6 +2,7 @@ import Icon from "./components/Icon";
 import Header from "./components/header/Header";
 import Button from "./components/Button";
 import ProductDetails from "./components/ProductDetails";
+import ProductPrice from "./components/ProductPrice";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer"
           }
         />
+        <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
       </main>
     </div>
   );
