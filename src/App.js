@@ -1,16 +1,16 @@
-import Icon from './components/Icon';
-import Header from './components/header/Header';
+import Icon from "./components/Icon";
+import Header from "./components/header/Header";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <main className="container">
-
-      {/* <Icon name="cart" alt="cart Icon" />
+        {/* <Icon name="cart" alt="cart Icon" />
       <Icon name="close" alt="close Icon" /> */}
 
-      {/* Collections
+        {/* Collections
       Men
       Women
       About
@@ -29,8 +29,8 @@ function App() {
 
       0
       Add to cart */}
-      
 
+        <Button name="Add to cart" />
       </main>
     </div>
   );
