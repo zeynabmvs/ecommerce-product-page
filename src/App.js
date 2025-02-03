@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Button from "./components/Button";
 import ProductDetails from "./components/ProductDetails";
 import ProductPrice from "./components/ProductPrice";
+import IncrementDecrementButton from "./components/IncDecButton";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
           }
         />
         <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
+        <IncrementDecrementButton maxValue={"10"}/>
+        
       </main>
     </div>
   );

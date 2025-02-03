@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Mobile First Approach */
+.increment-decrement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: hsl(223, 64%, 98%);
+    width: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.increment-decrement__button {
+    border: none;
+    color: hsl(26, 100%, 55%);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.increment-decrement__quantity {
+    margin: 0;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(220, 13%, 13%);
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+    .increment-decrement {
+        width: 150px;
+        padding: 15px;
+        margin: 0;
+    }
+
+}
