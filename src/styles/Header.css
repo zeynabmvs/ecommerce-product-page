@@ -16,13 +16,13 @@ button {
   align-items: center;
 }
 
-.header__inner__left {
+.header__inner-left {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-.header__inner__right {
+.header__inner-right {
   display: flex;
   align-items: center;
   gap: 1.6rem;
@@ -75,11 +75,11 @@ button {
     width: 5rem;
     height: 5rem;
   }
-  .header__inner__left {
+  .header__inner-left {
     gap: 5.6rem;
   }
 
-  .header__inner__right {
+  .header__inner-right {
     gap: 4.8rem;
   }
   .header__nav {
@@ -90,7 +90,7 @@ button {
     gap: 3.2rem;
     list-style-type: none;
   }
-  .header__nav__link {
+  .header__link {
     font-size: 1.6rem;
     font-weight: 400;
     text-decoration: none;
@@ -98,10 +98,10 @@ button {
     transition: color 0.2s ease;
     position: relative;
   }
-  .header__nav__link:hover {
+  .header__link:hover {
     color: var(--very-dark-blue);
   }
-  .header__nav__link::after {
+  .header__link::after {
     content: "";
     position: absolute;
     bottom: -53px;
@@ -113,7 +113,7 @@ button {
     background-color: var(--orange);
     transition: opacity 0.2s ease;
   }
-  .header__nav__link:hover::after {
+  .header__link:hover::after {
     opacity: 1;
   }
 }
@@ -175,7 +175,8 @@ button {
 .mobile-menu__nav {
   height: 100%;
   display: flex;
-  align-items: center;
+  padding-top: 6.4rem;
+  align-items: start;
   justify-content: left;
 }
 
@@ -190,7 +191,7 @@ button {
   margin-bottom: 1.5rem;
 }
 
-.mobile-menu__link {
+.mobile-menu__item a {
   text-decoration: none;
   color: var(--very-dark-blue);
   font-size: 1.5rem;

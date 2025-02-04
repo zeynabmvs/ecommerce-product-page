@@ -35,11 +35,7 @@ const MobileMenu = ({ showMenu, toggleMenu, headerLinks }) => {
           <ul className="mobile-menu__list">
             {headerLinks.map((item) => (
               <li key={item.label} className="mobile-menu__item">
-                <a
-                  href={item.href}
-                  className="mobile-menu__link"
-                  onClick={toggleMenu}
-                >
+                <a href={item.href} onClick={toggleMenu}>
                   {item.label}
                 </a>
               </li>
