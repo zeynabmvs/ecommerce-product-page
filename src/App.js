@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import ProductDetails from "./components/ProductDetails";
 import ProductPrice from "./components/ProductPrice";
 import IncrementDecrementButton from "./components/IncDecButton";
+import ProductImage from "./components/ProductImage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
 
       0
       Add to cart */}
+        <ProductImage />
 
         <Button name="Add to cart" />
         <ProductDetails
@@ -42,8 +44,7 @@ function App() {
           }
         />
         <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
-        <IncrementDecrementButton maxValue={"10"}/>
-        
+        <IncrementDecrementButton maxValue={"10"} />
       </main>
     </div>
   );
