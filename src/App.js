@@ -44,8 +44,10 @@ function App() {
             }
           />
           <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
-          <IncrementDecrementButton maxValue={"10"} />
-          <Button name="Add to cart" />
+          <div className="cs-buttons">
+            <IncrementDecrementButton maxValue={"10"} />
+            <Button name="Add to cart" />
+          </div>
         </div>
       </main>
     </div>
