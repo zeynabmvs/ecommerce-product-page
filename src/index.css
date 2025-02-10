@@ -17,7 +17,9 @@ html {
   font-size: 62.5%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
@@ -28,23 +30,42 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -67,8 +88,19 @@ body {
 }
 
 /* Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1110px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    max-width: 1024px;
+    display: grid;
+  }
+
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

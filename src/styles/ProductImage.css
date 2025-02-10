@@ -7,6 +7,7 @@
 .image-container img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .cs-icon {
@@ -37,4 +38,44 @@
 .next-icon {
   right: 0;
   padding-left: 3px;
+}
+
+@media screen and (min-width: 1024px) {
+  .cs-icon,
+  .previous-icon,
+  .next-icon {
+    display: none;
+  }
+  .image-container {
+    max-width: 450px;
+    height: 50vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 20px 0px;
+}
+
+.product-list .image-card {
+  display: none;
+  border-radius: 10px;
+  width: 80px;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-list .image-card {
+    display: block;
+  }
 }

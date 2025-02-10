@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main className="container">
+      <main className="container grid grid--1x2">
         {/* <Icon name="cart" alt="cart Icon" />
       <Icon name="close" alt="close Icon" /> */}
 
@@ -35,16 +35,18 @@ function App() {
       Add to cart */}
         <ProductImage />
 
-        <Button name="Add to cart" />
-        <ProductDetails
-          title={"Sneaker company"}
-          heading={"Fall limited edition sneakers"}
-          content={
-            "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer"
-          }
-        />
-        <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
-        <IncrementDecrementButton maxValue={"10"} />
+        <div>
+          <ProductDetails
+            title={"Sneaker company"}
+            heading={"Fall limited edition sneakers"}
+            content={
+              "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer"
+            }
+          />
+          <ProductPrice current={"$123"} percentage={"50%"} previous={"$250"} />
+          <IncrementDecrementButton maxValue={"10"} />
+          <Button name="Add to cart" />
+        </div>
       </main>
     </div>
   );

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Icon from "./Icon";
 import "../styles/ProductImage.css";
+import ProductImagesList from "./ProductImagesList.jsx";
 
 const ProductImage = () => {
   const [count, setCount] = useState(1);
+
+  const images = [1, 2, 3, 4];
 
   const minValue = 1;
   const maxValue = 4;
@@ -30,6 +33,7 @@ const ProductImage = () => {
           <Icon name="next" alt="Next icon" />
         </span>
       </div>
+      <ProductImagesList images={images} />
     </div>
   );
 };
