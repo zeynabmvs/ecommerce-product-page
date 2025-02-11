@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import '../styles/IncDecButton.css'
 
-const IncrementDecrementButton = ({ minValue = 0, maxValue }) => {
-    const [count, setCount] = useState(minValue);
+const IncrementDecrementButton = ({ minValue = 1, maxValue, count, setCount }) => {
+    // const [count, setCount] = useState(minValue);
 
     const handleIncrementCounter = () => {
         if (count < maxValue) {

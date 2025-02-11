@@ -22,10 +22,6 @@ const Header = () => {
     }
   };
 
-  const removeFromCart =(index)=>{
-    console.log("removed", index)
-  }
-
   return (
     <header className="header">
       <div className="container">
@@ -70,7 +66,7 @@ const Header = () => {
               />
             </button>
           </div>
-          {showCart && <Cart setShowCart={setShowCart} removeFromCart={removeFromCart} />}
+          {showCart && <Cart setShowCart={setShowCart} />}
         </div>
       </div>
 

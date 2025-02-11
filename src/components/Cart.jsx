@@ -1,38 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../styles/Cart.css";
 import Icon from "./Icon";
 import Button from "./Button";
+import {CartContext} from "../App";
 
-const Cart = ({
-  items = [
-    {
-      product: {
-        id: "123450",
-        title: "Sneaker company",
-        heading: "Fall limited edition sneakers",
-        content:
-          "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-        price: 250.0,
-        offPrice: 125.0,
-      },
-      count: 1,
-    },
-    {
-      product: {
-        id: "123430",
-        title: "Sneaker company",
-        heading: "Fall limited edition sneakers",
-        content:
-          "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer",
-        price: 300.0,
-        offPrice: 150.0,
-      },
-      count: 2,
-    },
-  ],
-  setShowCart,
-  removeFromCart,
-}) => {
+const Cart = ({ setShowCart }) => {
+  const { cart, dispatch } = useContext(CartContext);
+
   const closeCart = () => {
     setShowCart(false);
   };
@@ -51,10 +25,10 @@ const Cart = ({
       </div>
 
       <div className="cart__body">
-        {items.length > 0 ? (
+        {cart.length > 0 ? (
           <>
             <ul className="cart__items">
-              {items?.map((item, index) => {
+              {cart?.map((item, index) => {
                 const showPrice = (
                   item.product?.offPrice
                     ? item.product.offPrice
@@ -78,7 +52,9 @@ const Cart = ({
                     </div>
                     <button
                       className="cart__item-remove"
-                      onClick={() => removeFromCart(index)}
+                      onClick={() =>
+                        dispatch({ type: "removeFromCart", index: index })
+                      }
                     >
                       <Icon name="delete" />
                     </button>
