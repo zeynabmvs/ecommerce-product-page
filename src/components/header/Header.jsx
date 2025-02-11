@@ -3,13 +3,13 @@ import "../../styles/Header.css";
 import { headerLinks } from "../../utils/data";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import Cart from "../Cart";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const onCartButtonClick = () => {
-    console.log("cart clicked");
     setShowCart(!showCart);
   };
 
@@ -21,6 +21,10 @@ const Header = () => {
       document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
     }
   };
+
+  const removeFromCart =(index)=>{
+    console.log("removed", index)
+  }
 
   return (
     <header className="header">
@@ -66,6 +70,7 @@ const Header = () => {
               />
             </button>
           </div>
+          {showCart && <Cart setShowCart={setShowCart} removeFromCart={removeFromCart} />}
         </div>
       </div>
 
