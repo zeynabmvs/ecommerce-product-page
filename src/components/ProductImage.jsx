@@ -19,8 +19,8 @@ const ProductImage = () => {
     setCount(count < maxValue ? count + 1 : minValue);
   };
 
-  const handleSetImage = (image) => {
-    setCount(image);
+  const handleSetImage = (imageCount) => {
+    setCount(imageCount);
   };
 
   return (

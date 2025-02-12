@@ -26,5 +26,6 @@
 @media screen and (min-width: 1024px) {
   .btn {
     padding: 1.2rem 8rem;
+    height: 5rem;
   }
 }

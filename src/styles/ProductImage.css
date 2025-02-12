@@ -84,7 +84,6 @@
   }
 
   .product-list .image-card.active {
-    background-image: rgba(255, 255, 255, 0.5);
     border: 2px solid var(--orange);
   }
   .image-card.active img {
