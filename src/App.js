@@ -5,7 +5,7 @@ import ProductPrice from "./components/ProductPrice";
 import IncrementDecrementButton from "./components/IncDecButton";
 import ProductImage from "./components/ProductImage";
 import { product } from "./utils/data";
-import React, { useState, useReducer, createContext } from "react";
+import { useState, useReducer, createContext } from "react";
 import cartReducer from "./reducer";
 
 export const CartContext = createContext();

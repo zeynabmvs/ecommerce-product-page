@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import "../styles/Cart.css";
 import Icon from "./Icon";
 import Button from "./Button";
@@ -12,6 +12,12 @@ const Cart = ({ setShowCart }) => {
   const closeCart = () => {
     setShowCart(false);
   };
+
+  const handleCheckout =()=>{
+    dispatch({type: "emptyCart"})
+    setShowCart(false);
+
+  }
 
   useOutsideClick(cartRef, closeCart);
 
@@ -61,7 +67,7 @@ const Cart = ({ setShowCart }) => {
             </ul>
             <Button
               name="Checkout"
-              onClick={console.log("click")}
+              onClick={handleCheckout}
               hasIcon={false}
             />
           </>
