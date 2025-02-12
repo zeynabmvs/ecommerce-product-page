@@ -1,27 +1,24 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import "../styles/Cart.css";
 import Icon from "./Icon";
 import Button from "./Button";
-import {CartContext} from "../App";
+import { CartContext } from "../App";
+import useOutsideClick from "../hooks/useOutsideClick";
 
 const Cart = ({ setShowCart }) => {
   const { cart, dispatch } = useContext(CartContext);
+  const cartRef = useRef(null);
 
   const closeCart = () => {
     setShowCart(false);
   };
 
+  useOutsideClick(cartRef, closeCart);
+
   return (
-    <div className="cart">
+    <div className="cart" ref={cartRef}>
       <div className="cart__header">
         <h2 className="cart__title">Cart</h2>
-        <button
-          className="cart__close"
-          aria-label="Close cart"
-          onClick={closeCart}
-        >
-          <Icon name="close" />
-        </button>
       </div>
 
       <div className="cart__body">
