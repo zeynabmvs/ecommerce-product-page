@@ -1,14 +1,16 @@
 import React from "react";
 import "../styles/ProductPrice.css";
 
-const ProductPrice = ({ current, percentage, previous }) => {
+const ProductPrice = ({ product }) => {
+  const { price, offPrice } = product;
+  const percentage = ((price - offPrice) / price) * 100;
   return (
     <div className="product--price">
       <span className="amount">
-        <span className="current">{current}</span>
-        <span className="percentage">{percentage}</span>
+        <span className="current">{price}</span>
+        <span className="percentage">{percentage} %</span>
       </span>
-      <span className="previous">{previous}</span>
+      <span className="previous">{offPrice}</span>
     </div>
   );
 };

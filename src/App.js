@@ -22,18 +22,8 @@ function App() {
           <ProductImage />
 
           <div>
-            <ProductDetails
-              title={"Sneaker company"}
-              heading={"Fall limited edition sneakers"}
-              content={
-                "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer"
-              }
-            />
-            <ProductPrice
-              current={"$123"}
-              percentage={"50%"}
-              previous={"$250"}
-            />
+            <ProductDetails product={product} />
+            <ProductPrice product={product} />
             <div className="cs-buttons">
               <IncrementDecrementButton
                 maxValue={"10"}

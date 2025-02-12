@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/ProductDetails.css";
 
-const ProductDetails = ({ title, heading, content }) => {
+const ProductDetails = ({ product }) => {
+  const { title, heading, content } = product;
   return (
     <div className="card">
       <p className="title">{title}</p>
