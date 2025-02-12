@@ -65,6 +65,11 @@
   color: var(--black-75-opacity);
 }
 
+.cart__item-remove:hover svg path {
+  transition: all 0.2s ease-in-out;
+  fill: var(--very-dark-blue);
+}
+
 @media (min-width: 768px) {
   .cart {
     width: 360px;

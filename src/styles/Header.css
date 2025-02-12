@@ -15,7 +15,6 @@ button {
   justify-content: space-between;
   align-items: center;
   position: relative;
-
 }
 
 .header__inner-left {
@@ -29,6 +28,11 @@ button {
   align-items: center;
   gap: 1.6rem;
 }
+
+.header__cart-btn {
+  position: relative;
+}
+
 .header__cart-btn:hover svg path {
   transition: all 0.2s ease-in-out;
   fill: var(--very-dark-blue);
@@ -54,6 +58,19 @@ button {
 
 .header__profile:hover {
   border: 2px solid var(--orange);
+}
+
+.header__cart-quantity {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  padding: 1px 6px;
+  border-radius: 20px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
 }
 
 /* Desktop */

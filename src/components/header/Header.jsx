@@ -1,13 +1,15 @@
 import Icon from "../Icon";
 import "../../styles/Header.css";
 import { headerLinks } from "../../utils/data";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import Cart from "../Cart";
+import { CartContext } from "../../App";
 
 const Header = () => {
   const [showCart, setShowCart] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const { cart } = useContext(CartContext);
 
   const onCartButtonClick = () => {
     setShowCart(!showCart);
@@ -20,6 +22,10 @@ const Header = () => {
     } else {
       document.body.style.overflow = ""; // Re-enable scrolling when menu is closed
     }
+  };
+
+  const cartTotalCount = () => {
+    return cart.reduce((total, item) => total + item.count, 0);
   };
 
   return (
@@ -57,6 +63,7 @@ const Header = () => {
           <div className="header__inner-right">
             <button className="header__cart-btn" onClick={onCartButtonClick}>
               <Icon name="cart" alt="Cart icon" />
+              <span className="header__cart-quantity">{cartTotalCount()}</span>
             </button>
             <button className="header__profile">
               <img
