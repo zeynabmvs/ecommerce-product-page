@@ -19,6 +19,10 @@ const ProductImage = () => {
     setCount(count < maxValue ? count + 1 : minValue);
   };
 
+  const handleSetImage = (image) => {
+    setCount(image);
+  };
+
   return (
     <div>
       <div className="image-container">
@@ -33,7 +37,11 @@ const ProductImage = () => {
           <Icon name="next" alt="Next icon" />
         </span>
       </div>
-      <ProductImagesList images={images} />
+      <ProductImagesList
+        images={images}
+        onSetImage={handleSetImage}
+        imageCount={count}
+      />
     </div>
   );
 };
