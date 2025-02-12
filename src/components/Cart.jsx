@@ -4,6 +4,7 @@ import Icon from "./Icon";
 import Button from "./Button";
 import { CartContext } from "../App";
 import useOutsideClick from "../hooks/useOutsideClick";
+import { formatPrice } from "../utils/helper.js";
 
 const Cart = ({ setShowCart }) => {
   const { cart, dispatch } = useContext(CartContext);
@@ -36,8 +37,8 @@ const Cart = ({ setShowCart }) => {
                   item.product?.offPrice
                     ? item.product.offPrice
                     : item.product.price
-                ).toFixed(2);
-                const totalPrice = (showPrice * item.count).toFixed(2);
+                );
+                const totalPrice = (showPrice * item.count);
                 return (
                   <li key={item.product.id} className="cart__item">
                     <img
@@ -50,7 +51,7 @@ const Cart = ({ setShowCart }) => {
                         {item.product.heading}
                       </h3>
                       <span className="cart__item-pice">
-                        ${showPrice} x {item.count} <b>${totalPrice}</b>
+                        ${formatPrice(showPrice, 2)} x {item.count} <b>${formatPrice(totalPrice, 2)}</b>
                       </span>
                     </div>
                     <button
