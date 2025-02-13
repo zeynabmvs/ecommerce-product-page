@@ -1,7 +1,7 @@
 .image-container {
   position: relative;
   width: 90vw;
-  height: 40vh;
+  /* height: 40vh; */
 }
 
 .image-container img {

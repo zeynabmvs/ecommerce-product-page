@@ -77,37 +77,10 @@ body {
   background-color: var(--white);
 }
 
-main {
-  padding-block: 9rem;
-
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-/* Tablet */
-@media (min-width: 375px) {
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1110px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .grid {
-    max-width: 1024px;
-    display: grid;
-  }
-
-  .grid--1x2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .cs-buttons {
@@ -117,7 +90,27 @@ main {
   flex-direction: column;
 }
 
+
+/* Tablet */
+@media (min-width: 375px) {
+}
+
+/* Desktop */
 @media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1110px;
+  }
+  main {
+    padding-block: 9rem;
+  }
+  .grid {
+    max-width: 1024px;
+    display: grid;
+  }
+
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .cs-buttons {
     flex-direction: row;
   }
