@@ -77,6 +77,11 @@ body {
   background-color: var(--white);
 }
 
+main {
+  padding-block: 9rem;
+
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
