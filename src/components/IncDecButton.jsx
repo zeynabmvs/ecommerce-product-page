@@ -3,7 +3,8 @@ import '../styles/IncDecButton.css'
 
 const IncrementDecrementButton = ({ minValue = 1, maxValue, count, setCount }) => {
     // const [count, setCount] = useState(minValue);
-
+    console.log(maxValue)
+    
     const handleIncrementCounter = () => {
         if (count < maxValue) {
             setCount((prevState) => prevState + 1);

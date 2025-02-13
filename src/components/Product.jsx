@@ -19,7 +19,7 @@ const Product = ({ product }) => {
         <ProductPrice product={product} />
         <div className="cs-buttons">
           <IncrementDecrementButton
-            maxValue={"10"}
+            maxValue={product.inStock}
             count={count}
             setCount={setCount}
           />

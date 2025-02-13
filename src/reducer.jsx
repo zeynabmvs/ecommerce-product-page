@@ -10,7 +10,10 @@ function cartReducer(cart, action) {
 
       return cart.map((item) => {
         if (item.product.id === action.item.product.id) {
-          return { ...item, count: item.count + action.item.count };
+          console.log(item.product.inStock)
+          if (item.product.inStock >= item.count + action.item.count) {
+            return { ...item, count: item.count + action.item.count };
+          }
         }
         return item;
       });
