@@ -1,0 +1,92 @@
+.image-container {
+  position: relative;
+  width: 90vw;
+  /* height: 40vh; */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-icon {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.cs-icon:hover {
+  background-color: #e1e6e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.previous-icon {
+  left: 0;
+  padding-right: 3px;
+}
+
+.next-icon {
+  right: 0;
+  padding-left: 3px;
+}
+
+@media screen and (min-width: 1024px) {
+  .cs-icon,
+  .previous-icon,
+  .next-icon {
+    display: none;
+  }
+  .image-container {
+    max-width: 450px;
+    height: 50vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin: 20px 0px;
+}
+
+.product-list .image-card {
+  display: none;
+  border-radius: 10px;
+  width: 80px;
+  overflow: hidden;
+}
+
+.product-list .image-card:hover {
+  cursor: pointer;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-list .image-card {
+    display: block;
+  }
+
+  .product-list .image-card.active {
+    border: 2px solid var(--orange);
+  }
+  .image-card.active img {
+    filter: blur(2px) brightness(1.2) opacity(0.8);
+  }
+}

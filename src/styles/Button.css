@@ -1,0 +1,31 @@
+.btn {
+  border-radius: 10px;
+  border: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 1.2rem 10rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: var(--orange);
+  color: var(--black-75-opacity);
+}
+
+.btn--primary:hover {
+  background-color: hsl(26, 100%, 45%);
+}
+
+.btn .inline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    padding: 1.2rem 8rem;
+    height: 5rem;
+  }
+}
