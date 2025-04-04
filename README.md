@@ -37,8 +37,8 @@ We used the provided `style-guide.md` for colors, fonts, and other design elemen
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [on frontendmentor](https://www.frontendmentor.io/solutions/e-commerce-product-page-with-react-fqS1YamI5W)
+- Live Site URL: [ hosted with github pages](https://zeynabmvs.github.io/ecommerce-product-page/)
 
 ## Our Process
 
