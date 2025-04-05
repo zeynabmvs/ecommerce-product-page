@@ -89,7 +89,9 @@ body {
   margin-top: 3rem;
   flex-direction: column;
 }
-
+.app {
+  padding-bottom: 40px;
+}
 
 /* Tablet */
 @media (min-width: 375px) {
@@ -114,4 +116,8 @@ body {
   .cs-buttons {
     flex-direction: row;
   }
+  .app {
+    padding-bottom: 0px;
+  }
+  
 }
