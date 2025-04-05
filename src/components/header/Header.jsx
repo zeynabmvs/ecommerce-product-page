@@ -40,7 +40,7 @@ const Header = () => {
               <Icon name="menu" alt="Mobile menu toggle" />
             </button>
 
-            <a href="/#" className="header__logo">
+            <a href="#" className="header__logo">
               <img
                 src={process.env.PUBLIC_URL + "/logo.svg"}
                 alt="Sneaker Company"

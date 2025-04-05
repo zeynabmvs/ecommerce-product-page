@@ -42,13 +42,13 @@ const Cart = ({ setShowCart }) => {
                 return (
                   <li key={item.product.id} className="cart__item">
                     <img
-                      src="./images/image-product-1-thumbnail.jpg"
+                      src={process.env.PUBLIC_URL + `/images/image-product-1-thumbnail.jpg`}
                       alt=""
                       className="cart__item-img"
                     />
                     <div>
                       <h3 className="cart__item-title">
-                        {item.product.heading}
+                        {item.product.title}
                       </h3>
                       <span className="cart__item-pice">
                         ${formatPrice(showPrice, 2)} x {item.count} <b>${formatPrice(totalPrice, 2)}</b>

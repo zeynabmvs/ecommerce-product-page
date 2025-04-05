@@ -10,7 +10,6 @@ const ProductImagesList = ({ images, onSetImage, imageCount }) => {
           onClick={() => onSetImage(image)}
           key={image}
         >
-          {" "}
           <img
             src={process.env.PUBLIC_URL + `/images/image-product-${image}.jpg`}
             alt="Product"
