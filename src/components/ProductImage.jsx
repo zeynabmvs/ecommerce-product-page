@@ -3,6 +3,7 @@ import Icon from "./Icon";
 import "../styles/ProductImage.css";
 import ProductImagesList from "./ProductImagesList.jsx";
 import Lightbox from "./Lightbox.jsx";
+import { product } from "../utils/data.js";
 
 const ProductImage = () => {
   const [count, setCount] = useState(1);
@@ -26,11 +27,11 @@ const ProductImage = () => {
   };
 
   return (
-    <div>
+    <div className="image-wraper">
       <div className="image-container">
         <img
           src={process.env.PUBLIC_URL + `/images/image-product-${count}.jpg`}
-          alt="Product"
+          alt={product.title}
           onClick={() => setIsLightboxOpen(true)} // Open lightbox on click
         />
         <span className="cs-icon previous-icon" onClick={previousImage}>
