@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   return (
     <div className="container grid grid--1x2">
       <ProductImage />
-      <div>
+      <div className="details-wrapper">
         <ProductDetails product={product} />
         <ProductPrice product={product} />
         <div className="cs-buttons">
@@ -25,6 +25,8 @@ const Product = ({ product }) => {
           />
           <Button
             name="Add to cart"
+            iconName="cart"
+            hasIcon="true"
             onClick={() =>
               dispatch({
                 type: "addToCart",
