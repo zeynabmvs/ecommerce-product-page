@@ -1,7 +1,7 @@
 import Icon from "../Icon";
 import "../../styles/Header.css";
 import { headerLinks } from "../../utils/data";
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
 import MobileMenu from "./MobileMenu";
 import Cart from "../Cart";
 import { CartContext } from "../../App";
@@ -24,9 +24,9 @@ const Header = () => {
     }
   };
 
-  const cartTotalCount = () => {
+  const cartTotalCount = useMemo(() => {
     return cart.reduce((total, item) => total + item.count, 0);
-  };
+  }, [cart]);
 
   return (
     <header className="header">
@@ -65,7 +65,9 @@ const Header = () => {
           <div className="header__inner-right">
             <button className="header__cart-btn" onClick={onCartButtonClick}>
               <Icon name="cart" alt="Cart icon" />
-              <span className="header__cart-quantity">{cartTotalCount()}</span>
+              {cartTotalCount > 0 && (
+                <span className="header__cart-quantity">{cartTotalCount}</span>
+              )}
             </button>
             <button className="header__profile">
               <img
