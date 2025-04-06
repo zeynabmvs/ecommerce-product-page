@@ -31,7 +31,7 @@ const MobileMenu = ({ showMenu, toggleMenu, headerLinks }) => {
         </button>
 
         {/* Menu Items */}
-        <nav className="mobile-menu__nav">
+        <nav className="mobile-menu__nav" aria-label="Mobile navigation">
           <ul className="mobile-menu__list">
             {headerLinks.map((item) => (
               <li key={item.label} className="mobile-menu__item">

@@ -30,6 +30,8 @@ const Header = () => {
 
   return (
     <header className="header">
+      <h1 className="sr-only">E-commerce</h1>
+
       <div className="container">
         <div className="header__inner">
           <div className="header__inner-left">
@@ -40,14 +42,14 @@ const Header = () => {
               <Icon name="menu" alt="Mobile menu toggle" />
             </button>
 
-            <a href="#" className="header__logo">
+            <a href="#" className="header__logo" role="link" onClick={(e) => e.preventDefault()}>
               <img
                 src={process.env.PUBLIC_URL + "/logo.svg"}
                 alt="Sneaker Company"
               />
             </a>
 
-            <nav className="header__nav">
+            <nav className="header__nav" aria-label="Main navigation">
               <ul>
                 {headerLinks.map((item) => (
                   <li key={item.label}>

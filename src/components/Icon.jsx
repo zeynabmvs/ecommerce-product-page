@@ -9,7 +9,7 @@ const Icon = ({ name, alt = "icon", className = "", ...props }) => {
   }
 
   return (
-    <span className={`icon ${className}`} aria-label={alt} {...props}>
+    <span className={`icon ${className}`} aria-hidden="true" {...props}>
       {IconComponent}
     </span>
   );
