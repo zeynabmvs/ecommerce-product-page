@@ -8,7 +8,7 @@ import IncrementDecrementButton from "./IncDecButton";
 import ProductImage from "./ProductImage";
 
 const Product = ({ product }) => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
   const { dispatch } = useContext(CartContext);
 
   return (
@@ -27,7 +27,7 @@ const Product = ({ product }) => {
             name="Add to cart"
             iconName="cart"
             hasIcon="true"
-            onClick={() =>
+            onClick={() => count>0 && 
               dispatch({
                 type: "addToCart",
                 item: {
